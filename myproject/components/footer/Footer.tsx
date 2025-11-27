@@ -29,7 +29,7 @@ const Footer: React.FC<FooterProps> = () => {
         <div className='col-lg-4 mb-lg-2 mb-4'>
           <div>
             {/* <img src={FooterLogo} alt="" /> */}
-            <Image src={FooterLogo}></Image>
+            <Image src={FooterLogo} alt='footer-img'></Image>
             <p className='text-white'>Your trusted partner in healthcare revenue cycle management</p>
             <div className='d-flex justify-content-start align-items-center gap-5 pt-2'>
               <p className='footer-icons'><BsTwitterX /></p>
