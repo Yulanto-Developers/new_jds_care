@@ -33,23 +33,14 @@ const AboutUsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* <div className="about-video pt-75">
-          <div className="container">
-            <div className="career_video">
-              <video loop muted playsInline autoPlay>
-                <source src="/images/video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div> */}
+
 
         <FeaturesSection />
         <div className='pt-50' style={{ backgroundColor: '#f6f6f8' }}>
           <WorkSection />
-       
+
         </div>
-      
+
       </div>
       <Footer />
       <Scrollbar />
