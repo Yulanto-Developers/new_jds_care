@@ -1,6 +1,6 @@
 'use client';
 
-import { React , useState } from 'react';
+import { useState } from 'react';
 import ContactSection from '../../components/ContactSection';
 import Header from '../../components/header/Header';
 import Scrollbar from '../../components/scrollbar/scrollbar';
@@ -24,11 +24,13 @@ const ContactPage: React.FC = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Message sent!");
   };
@@ -176,7 +178,7 @@ const ContactPage: React.FC = () => {
                       <textarea
                         name="message"
                         className="form-control"
-                        rows="4"
+                       
                         placeholder="Write message"
                         onChange={handleChange}
                       ></textarea>

@@ -4,15 +4,9 @@ import React, { Fragment } from 'react';
 import Header from '../../components/header/Header';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Footer from '../../components/footer/Footer';
-import CtaSection from '../../components/CtaSection/CtaSection';
-import icon from '@/public/images/icon/magic-icon.svg';
+
 import FeaturesSection from './Features';
-import WhyChoose from './WhyChoose';
-import FunfactSection from './Funfact';
-import Roadmap from './Roadmap';
-import AwardSection from './AwardSection';
-import GallerySection from '../career/Gallery';
-import Image from 'next/image';
+
 import WorkSection from '../team/work';
 import '../../styles/about.css'
 import '../../styles/custome.css'
@@ -53,12 +47,9 @@ const AboutUsPage: React.FC = () => {
         <FeaturesSection />
         <div className='pt-50' style={{ backgroundColor: '#f6f6f8' }}>
           <WorkSection />
-          {/* <FunfactSection /> */}
+       
         </div>
-        {/* <Roadmap /> */}
-        {/* <AwardSection /> */}
-        {/* <GallerySection pClass="pt-130" /> */}
-        {/* <CtaSection /> */}
+      
       </div>
       <Footer />
       <Scrollbar />
