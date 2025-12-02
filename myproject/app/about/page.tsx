@@ -4,9 +4,7 @@ import React, { Fragment } from 'react';
 import Header from '../../components/header/Header';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Footer from '../../components/footer/Footer';
-
 import FeaturesSection from './Features';
-
 import WorkSection from '../team/work';
 import '../../styles/about.css'
 import '../../styles/custome.css'
@@ -32,15 +30,10 @@ const AboutUsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-
-
-        <FeaturesSection />
+         <FeaturesSection />
         <div className='pt-50' style={{ backgroundColor: '#f6f6f8' }}>
           <WorkSection />
-
         </div>
-
       </div>
       <Footer />
       <Scrollbar />
