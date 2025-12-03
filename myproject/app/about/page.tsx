@@ -30,9 +30,9 @@ const AboutUsPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <>
+        <div>
           <FeaturesSection />
-        </>
+        </div>
         <div className='pt-50' style={{ backgroundColor: '#f6f6f8' }}>
           <WorkSection />
         </div>

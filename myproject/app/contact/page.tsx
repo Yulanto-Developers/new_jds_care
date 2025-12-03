@@ -15,7 +15,6 @@ import '../../styles/custome.css'
 
 
 const ContactPage: React.FC = () => {
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,17 +23,24 @@ const ContactPage: React.FC = () => {
     message: "",
   });
 
+
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
+
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Message sent!");
   };
-
 
   return (
     <>
@@ -178,7 +184,7 @@ const ContactPage: React.FC = () => {
                       <textarea
                         name="message"
                         className="form-control"
-                       
+
                         placeholder="Write message"
                         onChange={handleChange}
                       ></textarea>
