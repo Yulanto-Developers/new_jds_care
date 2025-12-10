@@ -30,12 +30,15 @@ const CareerPage: React.FC = () => {
     phone: "",
     position: "",
     experience: "",
-    resume: null,
+    resume: null as File | null,
     message: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
+  // FIXED TYPE FOR INPUT + FILE
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value, files } = e.target as HTMLInputElement;
 
     setFormData({
       ...formData,
@@ -43,7 +46,8 @@ const CareerPage: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  // FIXED TYPE FOR FORM SUBMIT
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     alert("Application submitted successfully!");
